@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f9;
+}
+
+/* Heading */
+header {
+  text-align: center;
+}
+header h1 {
+  color: #2c3e50;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+thead {
+  background-color: #1a5276;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #d6eaf8;
+}
+
+/* Form Styling */
+.add-expense-section {
+  background-color: #eaf2f8;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+.add-expense-section > form > label {
+  display: block;
+  margin-top: 10px;
+}
+.add-expense-section > form > input,
+.add-expense-section > form > select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1a5276;
+  color: white;
+  border: none;
+}
+button:hover {
+  background-color: #154360;
+  cursor: pointer;
+}
+
+/* Advanced CSS Selectors */
+.expenses-section td {
+  font-size: 14px; /* descendant selector */
+}
+.add-expense-section > form > input:focus {
+  border: 2px solid #922b21; /* direct child + focus */
+}
+input:not([type="submit"]) {
+  background-color: #fffaf0; /* negation pseudo-class */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo + Heading -->
+  <header>
+    <img src="PLP Logo.png" alt="Budget Tracker Logo" width="50">
+    <h1>My Budget Tracker</h1>
+    <p id="tagline">Track my income and expenses in one place</p>
+  </header>
+
+  <!-- Add Expense Form -->
+  <section id="add-expense" class="add-expense-section">
+    <h2>Add Expense</h2>
+    <form>
+      <label for="expense-name">Expense Name:</label>
+      <input type="text" id="expense-name" placeholder="e.g. Fruits">
+
+      <label for="expense-amount">Amount (Ksh):</label>
+      <input type="number" id="expense-amount" placeholder="e.g. 1500">
+
+      <label for="expense-category">Category:</label>
+      <select id="expense-category">
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="rent">Rent</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="other">Other</option>
+      </select>
+
+      <button type="button">Add Expense</button>
+    </form>
+  </section>
+
+  <!-- Your Expenses Table -->
+  <section id="your-expenses" class="expenses-section">
+    <h2>My Expenses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Fruits</td><td>1500</td><td>Food</td><td>2026-09-01</td></tr>
+        <tr><td>Bus Fare</td><td>100</td><td>Transport</td><td>2026-09-02</td></tr>
+        <tr><td>Rent</td><td>5000</td><td>Rent</td><td>2026-09-03</td></tr>
+        <tr><td>Movie</td><td>800</td><td>Entertainment</td><td>2026-09-04</td></tr>
+        <tr><td>Stationery</td><td>300</td><td>Other</td><td>2026-09-05</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Multimedia -->
+  <section>
+    <h2>Budgeting Tips Video</h2>
+    <iframe width="560" height="315" src="plp_math_playlist_grades_6-8_video_6_h264_42874.mp4"
+      title="Budgeting Tips" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Interactive Details -->
+  <section>
+    <details>
+      <summary>How to use this tracker</summary>
+      <p>Fill in the form with your expense details, then click "Add Expense". 
+      Your expenses will appear in the table below. In future weeks, this will be interactive with JavaScript.</p>
+    </details>
+  </section>
+</body>
+</html>
