@@ -1,77 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Budget Tracker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Budget Tracker</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Logo + Heading -->
-  <header>
-    <img src="PLP Logo.png" alt="Budget Tracker Logo" width="50">
-    <h1>My Budget Tracker</h1>
-    <p id="tagline">Track my income and expenses in one place</p>
-  </header>
 
-  <!-- Add Expense Form -->
-  <section id="add-expense" class="add-expense-section">
-    <h2>Add Expense</h2>
-    <form>
-      <label for="expense-name">Expense Name:</label>
-      <input type="text" id="expense-name" placeholder="e.g. Fruits">
+    <!-- Page Heading -->
+    <header class="page-heading">
 
-      <label for="expense-amount">Amount (Ksh):</label>
-      <input type="number" id="expense-amount" placeholder="e.g. 1500">
+        <!-- Logo -->
+        <img 
+    src="https://img.icons8.com/fluency/96/budget.png" 
+    alt="Budget Tracker Logo"
+    class="logo"
+>
 
-      <label for="expense-category">Category:</label>
-      <select id="expense-category">
-        <option value="food">Food</option>
-        <option value="transport">Transport</option>
-        <option value="rent">Rent</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="other">Other</option>
-      </select>
+        <h1>My Budget Tracker</h1>
 
-      <button type="button">Add Expense</button>
-    </form>
-  </section>
+        <p>Track my income and expenses in one place.</p>
 
-  <!-- Your Expenses Table -->
-  <section id="your-expenses" class="expenses-section">
-    <h2>My Expenses</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Amount</th>
-          <th>Category</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Fruits</td><td>1500</td><td>Food</td><td>2026-09-01</td></tr>
-        <tr><td>Bus Fare</td><td>100</td><td>Transport</td><td>2026-09-02</td></tr>
-        <tr><td>Rent</td><td>5000</td><td>Rent</td><td>2026-09-03</td></tr>
-        <tr><td>Movie</td><td>800</td><td>Entertainment</td><td>2026-09-04</td></tr>
-        <tr><td>Stationery</td><td>300</td><td>Other</td><td>2026-09-05</td></tr>
-      </tbody>
-    </table>
-  </section>
+    </header>
 
-  <!-- Multimedia -->
-  <section>
-    <h2>Budgeting Tips Video</h2>
-    <iframe width="560" height="315" src="plp_math_playlist_grades_6-8_video_6_h264_42874.mp4"
-      title="Budgeting Tips" frameborder="0" allowfullscreen></iframe>
-  </section>
 
-  <!-- Interactive Details -->
-  <section>
-    <details>
-      <summary>How to use this tracker</summary>
-      <p>Fill in the form with your expense details, then click "Add Expense". 
-      Your expenses will appear in the table below. In future weeks, this will be interactive with JavaScript.</p>
-    </details>
-  </section>
+    <!-- Introduction Video -->
+   
+
+
+    <!-- Add Expense Form -->
+    <section class="card">
+
+        <h2>Add Expense</h2>
+
+        <form>
+
+            <label for="item">Item</label>
+
+            <input
+                type="text"
+                id="item"
+                name="item"
+                placeholder="Enter expense item"
+            >
+
+
+            <label for="amount">Amount</label>
+
+            <input
+                type="number"
+                id="amount"
+                name="amount"
+                placeholder="Enter amount"
+            >
+
+
+            <label for="category">Category</label>
+
+            <select id="category" name="category">
+
+                <option value="">Select category</option>
+
+                <option value="food">Food</option>
+
+                <option value="transport">Transport</option>
+
+                <option value="entertainment">Entertainment</option>
+
+                <option value="other">Other</option>
+
+            </select>
+
+
+            <button type="submit">
+                Add Expense
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Expense Table -->
+    <section class="card">
+
+        <h2>Expense Table</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+                    <td>Lunch</td>
+                    <td>$10</td>
+                    <td>Food</td>
+                </tr>
+
+                <tr>
+                    <td>Bus Fare</td>
+                    <td>$5</td>
+                    <td>Transport</td>
+                </tr>
+
+                <tr>
+                    <td>Movie</td>
+                    <td>$15</td>
+                    <td>Entertainment</td>
+                </tr>
+
+                <tr>
+                    <td>Stationery</td>
+                    <td>$8</td>
+                    <td>Other</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="card media-section">
+
+    <h2>Learn About Budgeting</h2>
+
+    <p>Watch this video to learn more about managing your budget.</p>
+
+    <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/PqUoxVw-rOI"
+        title="Budgeting Video"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 My Budget Tracker. All rights reserved.
+        </p>
+
+    </footer>
+
 </body>
 </html>
