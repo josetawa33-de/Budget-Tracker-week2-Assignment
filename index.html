@@ -3,241 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SpendWise Dashboard</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet"
-    >
-
+    <title>SpendWise - Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="dashboard">
+    <div class="container">
+        <h1>SpendWise</h1>
+        <p>Simple Budget and Expense Tracker</p>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="card">
+            <h2>Budget Summary</h2>
 
-            <div class="logo">
-                <h2>SpendWise</h2>
-                <p>Money Dashboard</p>
-            </div>
+            <p>Budget: <span id="budget">0</span></p>
+            <p>Expenses: <span id="expenses">0</span></p>
+            <p>Remaining Balance: <span id="balance">0</span></p>
 
-            <nav class="sidebar-nav">
-                <a href="#" class="nav-item active">🏠 Dashboard</a>
-                <a href="#" class="nav-item">💰 Budget</a>
-                <a href="#" class="nav-item">💳 Expenses</a>
-                <a href="#" class="nav-item">📊 Reports</a>
-                <a href="#" class="nav-item">🎯 Savings</a>
-                <a href="#" class="nav-item">⚙️ Settings</a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <p>Smart spending starts here.</p>
-            </div>
-
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-
-            <!-- Header -->
-            <header class="header">
-
-                <div class="header-text">
-                    <p class="welcome">Welcome back!</p>
-                    <h1>Financial Overview</h1>
-                </div>
-
-                <div class="profile">
-                    <div class="profile-icon">JT</div>
-                    <div>
-                        <strong>Joseph</strong>
-                        <span>My Account</span>
-                    </div>
-                </div>
-
-            </header>
-
-            <!-- Summary -->
-            <section class="summary">
-
-                <div class="summary-item">
-                    <span>Total Budget</span>
-                    <strong>KSh 50,000</strong>
-                </div>
-
-                <div class="summary-item">
-                    <span>Total Spent</span>
-                    <strong>KSh 32,450</strong>
-                </div>
-
-                <div class="summary-item">
-                    <span>Remaining</span>
-                    <strong>KSh 17,550</strong>
-                </div>
-
-            </section>
-
-            <!-- Categories -->
-            <section class="categories">
-
-                <div class="section-heading">
-                    <div>
-                        <p class="section-label">MONTHLY BREAKDOWN</p>
-                        <h2>Spending Categories</h2>
-                    </div>
-
-                    <button class="view-button">View Report</button>
-                </div>
-
-                <div class="card-grid">
-
-                    <!-- Food -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">🍔</div>
-                            <span class="status">On Track</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Food</h3>
-                            <p>Groceries and meals</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 8,500</strong>
-                            <span>of KSh 10,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar food"></div>
-                        </div>
-                    </article>
-
-                    <!-- Transport -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">🚌</div>
-                            <span class="status">On Track</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Transport</h3>
-                            <p>Travel and commuting</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 4,200</strong>
-                            <span>of KSh 6,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar transport"></div>
-                        </div>
-                    </article>
-
-                    <!-- Rent -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">🏠</div>
-                            <span class="status">Paid</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Rent</h3>
-                            <p>Housing and accommodation</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 12,000</strong>
-                            <span>of KSh 12,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar rent"></div>
-                        </div>
-                    </article>
-
-                    <!-- Entertainment -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">🎮</div>
-                            <span class="status">Moderate</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Entertainment</h3>
-                            <p>Leisure and activities</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 2,750</strong>
-                            <span>of KSh 5,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar entertainment"></div>
-                        </div>
-                    </article>
-
-                    <!-- Savings -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">💰</div>
-                            <span class="status">Growing</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Savings</h3>
-                            <p>Emergency and future goals</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 3,000</strong>
-                            <span>of KSh 7,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar savings"></div>
-                        </div>
-                    </article>
-
-                    <!-- Utilities -->
-                    <article class="category-card" tabindex="0">
-                        <div class="card-top">
-                            <div class="category-icon">💡</div>
-                            <span class="status">On Track</span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Utilities</h3>
-                            <p>Electricity, water and internet</p>
-                        </div>
-
-                        <div class="amount-row">
-                            <strong>KSh 2,000</strong>
-                            <span>of KSh 4,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar utilities"></div>
-                        </div>
-                    </article>
-
-                </div>
-
-            </section>
-
-        </main>
-
+            <button onclick="startBudget()">Enter Budget Information</button>
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
