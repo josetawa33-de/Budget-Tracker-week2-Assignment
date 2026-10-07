@@ -3,57 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpendWise - Budget Tracker</title>
+    <title>SpendWise - Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>SpendWise</h1>
-        <p>Simple Budget and Expense Tracker</p>
+    <header>
+        <div class="container">
+            <h1>SpendWise</h1>
+            <p>Smart and simple personal expense tracker</p>
+        </div>
+    </header>
 
-        <div class="card">
-            <h2>Budget Information</h2>
+    <main class="container">
+
+        <!-- Budget Section -->
+        <section class="budget-section">
+            <h2>Set Your Budget</h2>
 
             <form id="budgetForm">
+                <div class="form-group">
+                    <label for="budgetInput">Monthly Budget</label>
+                    <input 
+                        type="number" 
+                        id="budgetInput" 
+                        placeholder="Enter your budget"
+                        min="0"
+                        step="0.01"
+                    >
+                </div>
 
-                <label for="budgetInput">Total Budget</label>
-                <input
-                    type="number"
-                    id="budgetInput"
-                    placeholder="Enter your budget"
-                    step="0.01"
-                    min="0"
-                    required
-                >
+                <button type="submit">Set Budget</button>
+            </form>
+        </section>
 
-                <label for="expensesInput">Total Expenses</label>
-                <input
-                    type="number"
-                    id="expensesInput"
-                    placeholder="Enter your expenses"
-                    step="0.01"
-                    min="0"
-                    required
-                >
+        <!-- Summary Cards -->
+        <section class="summary">
+            <div class="card">
+                <h3>Budget</h3>
+                <p id="budgetDisplay">KES 5000</p>
+            </div>
 
-                <button type="submit">Calculate Budget</button>
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="expenseDisplay">KES 50000</p>
+            </div>
 
-                <p id="errorMessage"></p>
+            <div class="card">
+                <h3>Balance</h3>
+                <p id="balanceDisplay">KES 2500</p>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <div id="message" class="message"></div>
+
+        <!-- Add Expense -->
+        <section class="expense-section">
+            <h2>Add an Expense</h2>
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+                    <label for="expenseName">Expense Name</label>
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="Fruits"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseAmount">Amount</label>
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        placeholder="Enter amount"
+                        min="3000"
+                        step="2500"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseCategory">Category</label>
+
+                    <select id="expenseCategory">
+                        <option value="">Select category</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit">Add Expense</button>
 
             </form>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Budget Summary</h2>
+        <!-- Expense List -->
+        <section class="expense-list-section">
+            <div class="section-header">
+                <h2>Expense History</h2>
+                <button id="clearExpenses" class="danger-button">
+                    Clear All
+                </button>
+            </div>
 
-            <p>Budget: <span id="budget">0</span></p>
-            <p>Expenses: <span id="expenses">0</span></p>
-            <p>Remaining Balance: <span id="balance">0</span></p>
-        </div>
-    </div>
+            <div id="expenseList">
+                <p class="empty-message">
+                    No expenses added yet.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpendWise | Personal Expense Tracker</p>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

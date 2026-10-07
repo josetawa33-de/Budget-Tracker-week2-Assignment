@@ -1,41 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f2f6fc;
-    text-align: center;
-    margin: 0;
-    padding: 50px;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 600px;
+    width: 90%;
+    max-width: 1100px;
     margin: auto;
 }
 
-h1 {
-    color: #1d4ed8;
+/* Header */
+
+header {
+    background-color: #1f4e79;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    margin-top: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
 }
 
-p {
-    font-size: 18px;
+header p {
+    font-size: 16px;
 }
+
+/* Main */
+
+main {
+    padding: 30px 0;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #1f4e79;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1f4e79;
+}
+
+/* Buttons */
 
 button {
-    background: #1d4ed8;
+    background-color: #1f4e79;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 18px;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #163ea8;
+    background-color: #163a5c;
+}
+
+.danger-button {
+    background-color: #c0392b;
+}
+
+.danger-button:hover {
+    background-color: #922b21;
+}
+
+/* Summary */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.card {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1f4e79;
+}
+
+/* Messages */
+
+.message {
+    display: none;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.message.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message.warning {
+    display: block;
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Expense List */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 15px;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-info h3 {
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.expense-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .expense-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 94%;
+    }
 }
